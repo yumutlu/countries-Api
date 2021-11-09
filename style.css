@@ -1,0 +1,158 @@
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color:hsl(207, 26%, 17%);
+    color: hsl(0, 0%, 100%);
+    font-family: "Nunito Sans",sans-serif;
+}
+
+.container{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.container:nth-child(1){
+    box-shadow: 0 0 5px rgb(0, 0, 0.3);
+    background-color: hsl(209, 23%, 22%)
+} 
+
+button{
+    outline: none;
+    border:0 ;
+    background: transparent;
+}
+.form-control{
+    width: 400px;
+    box-shadow: 0 0 5px ;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.form-control input{
+    width: 100%;
+    padding:17px 50px;
+    outline: 0;
+    border: 0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    background-color: hsl(209, 23%, 22%);
+
+
+}
+::placeholder{
+    color:#fff;
+}
+
+input,select,textarea{
+    color: #fff;
+}
+.form-control i{
+    position:absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+}
+.dropDownCon{
+    width: 200px;
+    position: relative;
+}
+.dropDown{
+    width: 100%;
+    padding:17px 14px;
+border-radius: 5px;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+background-color: hsl(209, 23%, 22%);
+box-shadow: 0 0 5px rgb(0, 0, 0.3);
+
+}
+
+.dropDown p {
+    letter-spacing: 0.5px;
+    font-size: 15px;
+  
+}
+i{
+    cursor:  pointer;
+}
+.drop{
+    position: absolute;
+    box-shadow: 0 0 5px rgb(0, 0, 0.3);
+    top: 4rem;
+    padding: 10px 14px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: hsl(209, 23%, 22%);
+
+  cursor: pointer;
+}
+.drop p{
+    margin: 1px 0;
+}
+.countries{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 20px;
+}
+.country{
+    min-height: 350px;
+    box-shadow: 0 0 5px rgb(0, 0, 0.3);
+    width: 300px;
+border-radius: 5px;
+overflow: hidden;
+}
+
+.country-img img{
+    width: 100%;
+    object-fit: cover;
+}
+.country-info{
+    padding: 20px 17px;
+}
+
+.country-info h5{
+    padding: 8px 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.country-info p{
+    letter-spacing: 1px;
+}
+.country-info p>strong{
+    font-weight: 600;
+}
+
+.showDropDown{
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+
+    .container>h1{
+        font-size: x-large;
+        margin: 0 auto;
+    }
+
+    .container{
+        flex-wrap: wrap;
+    }
+    .dropDownCon{
+        top: 20px;
+        margin: 0 auto; 
+    }
+    .countries{
+        justify-items: center;
+    }
+}
