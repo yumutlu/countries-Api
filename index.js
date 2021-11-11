@@ -30,7 +30,12 @@ function showCountry(data) {
     <p><strong>Capital: </strong>${data.capital}</p>
   </div>`;
   countriesElem.appendChild(country);
+  country.addEventListener("click", ()=>{
+    showCountryDetail(data)
+  })
 }
+
+
 
 dropDown.addEventListener("click", () => {
   dropElem.classList.toggle("showDropDown");
@@ -57,3 +62,41 @@ search.addEventListener("input",()=>{
         }
     }) 
 })
+
+
+const countryModal = document.querySelector(".countryModal")
+  function showCountryDetail(data){
+  countryModal.classList.toggle("show")
+  countryModal.innerHTML=`<button class="backBtn">Back</button>
+
+  <div class="modal">
+  <div class="leftModal">
+    <img src="${data.flag}" alt="" />
+  </div>
+  <div class="rightModal">
+    <h1>${data.name}</h1>
+   <div class="modalInfo">
+    <div class="innerLeft inner">
+      <p><strong>Native name: </strong>${data.nativeName}</p>
+      <p><strong>Population: </strong>${data.population}</p>
+      <p><strong>Region: </strong>${data.region}</p>
+      <p><strong>Sub-region: </strong>${data.subregion}</p>
+
+    </div>
+    <div class="innerRight inner">
+      <p><strong>Capital: </strong>${data.capital}</p>
+      <p><strong>Top Level Domain: </strong>${data.topLevelDomain}</p>
+      <p><strong>Currencies: </strong>${data.currencies.map(elem=>(elem.name))}</p>
+      <p><strong>Languages: </strong>${data.languages.map(elem=>(elem.name))}</p>
+    </div>
+ 
+   </div>
+     <div class="borderCountries">Border Countries: </strong>${data.borders}</div>
+  </div>
+
+</div>`
+const backBtn = countryModal.querySelector(".backBtn")
+backBtn.addEventListener("click",()=>{
+countryModal.classList.toggle("show")
+})
+}

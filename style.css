@@ -156,3 +156,74 @@ overflow: hidden;
         justify-items: center;
     }
 }
+
+.countryModal{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background:  hsl(207, 26%, 17%);
+padding: 30px;
+}
+
+.backBtn{
+    position:absolute;
+    color: #fff;
+    top: 3rem;
+    left: 30px;
+    background: hsl(209, 23%, 22%);
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0, 0, 0.3);
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+}
+.modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    height: 100%;
+    width: 100%;
+}
+
+.leftModal,.rightModal{
+    width: 50%;
+}
+
+.leftModal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rightModal{
+    margin-left: 40px;
+}
+.modalInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightModal h1{
+    margin: 10px 0;    
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+
+.inner p{
+    letter-spacing: 1px;
+}
+
+.inner p>strong{
+    font-weight: 600px;
+}
+.show{
+    display: none;
+}
+.borderCountries{
+    position: relative;
+    top: 80px;
+}
