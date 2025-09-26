@@ -7,7 +7,7 @@ const countryName = document.getElementsByClassName("countryName")
 const search = document.querySelector(".search")
 
 async function getCountry() {
-  const url = await fetch("https://restcountries.com/v2/all");
+  const url = await fetch("https://restcountries.com/v3.1/all");
   const res = await url.json();
   console.log(res);
   res.forEach((element) => {
